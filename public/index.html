@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f0e8">
+    <meta name="description" content="A read-only showcase of a role-separated, multi-agent software delivery pipeline.">
+    <title>Fieldnotes — Multi-agent software pipeline</title>
+    <link rel="icon" href="./mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="demo-ribbon" role="note">
+      <span class="ribbon-mark" aria-hidden="true"></span>
+      READ-ONLY SHOWCASE <span class="ribbon-divider">/</span> FIXED SAMPLE RUN — NOT A LIVE PIPELINE
+    </div>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Fieldnotes home">
+        <span class="wordmark-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>FIELDNOTES<span class="wordmark-sub"> / SYSTEMS STUDY 01</span></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#method">Method</a>
+        <a href="#run">Sample run</a>
+        <a href="#evidence">Quality gates</a>
+      </nav>
+      <a class="header-link" href="#run">Explore the run <span aria-hidden="true">↘</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A SOFTWARE DELIVERY SYSTEM</p>
+          <h1>Not one model<br>grading its <em>own</em> work.</h1>
+          <p class="hero-deck">A complete engineering pipeline, split into distinct roles. Authors build. Adversaries inspect. Evidence decides what ships.</p>
+          <div class="hero-actions">
+            <a class="button-primary" href="#run">Follow a sample run <span aria-hidden="true">↓</span></a>
+            <span class="hero-caption">A fixed, illustrative walkthrough<br>Nothing here starts or changes a run.</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Pipeline map from brief through eight independent stages to safe delivery">
+          <div class="visual-topline">
+            <span>THE HANDOFF MAP</span><span>08 STAGES</span>
+          </div>
+          <div class="map-brief">
+            <span class="map-pin" aria-hidden="true"></span>
+            <div><small>INPUT</small><strong>Human requirements</strong></div>
+            <span class="brief-tag">ONCE</span>
+          </div>
+          <div class="map-track">
+            <div class="track-line"></div>
+            <div class="map-node n1"><span class="node-num">01</span><span class="node-label">Plan</span></div>
+            <div class="map-node n2"><span class="node-num">02</span><span class="node-label">Build</span></div>
+            <div class="map-node n3"><span class="node-num">03</span><span class="node-label">Test</span></div>
+            <div class="map-node n4"><span class="node-num">04</span><span class="node-label">Fix</span></div>
+            <div class="map-node n5 gate-node"><span class="node-num">05</span><span class="node-label">Security</span></div>
+            <div class="map-node n6 gate-node"><span class="node-num">06</span><span class="node-label">QA</span></div>
+            <div class="map-node n7 verify-node"><span class="node-num">07</span><span class="node-label">Verify</span></div>
+            <div class="map-node n8 verify-node"><span class="node-num">08</span><span class="node-label">Deliver</span></div>
+          </div>
+          <div class="map-legend"><span><i class="legend-dot author-dot"></i>Authoring</span><span><i class="legend-dot gate-dot"></i>Independent gates</span><span><i class="legend-dot proof-dot"></i>Evidence-led</span></div>
+          <div class="visual-foot"><span>REVIEW IS NOT SELF-REVIEW</span><span class="visual-coord">FIG. 01&nbsp; / &nbsp;FLOW</span></div>
+          <div class="visual-stamp" aria-hidden="true">SEPARATION<br>OF DUTIES</div>
+        </div>
+        <div class="hero-index" aria-hidden="true">01—08</div>
+      </section>
+
+      <section class="thesis-strip" id="method">
+        <p class="section-index">THE DESIGN<br>PRINCIPLE <span>01 / 03</span></p>
+        <h2>Each handoff changes<br>who gets to say <em>“done.”</em></h2>
+        <p class="thesis-note">The coder never approves its own work. A separate tester hunts for failure, and deterministic checks require passing evidence—not a confident summary.</p>
+      </section>
+
+      <section class="run-section" id="run">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span class="eyebrow-line"></span> THE RUN RECORD</p>
+            <h2>A small brief.<br><em>Eight distinct jobs.</em></h2>
+          </div>
+          <div class="run-meta">
+            <span class="sample-chip"><span class="sample-dot"></span> ILLUSTRATIVE SAMPLE</span>
+            <p>Expense API · fixed scenario<br>Not generated by this page</p>
+          </div>
+        </div>
+
+        <div class="brief-card">
+          <div class="brief-card-label"><span>01</span> THE BRIEF</div>
+          <div class="brief-card-body">
+            <p>“Build an expense API that prevents duplicate submissions, supports cursor-based history, and keeps an auditable record of every change.”</p>
+            <span>THREE REQUIREMENTS · ONE CLEAR CONTRACT</span>
+          </div>
+          <div class="brief-card-index" aria-hidden="true">REQ<br>001</div>
+        </div>
+
+        <div class="run-layout">
+          <div class="stage-list" role="list" aria-label="Sample pipeline stages">
+            <button class="stage-item is-selected" type="button" data-stage="plan" aria-pressed="true">
+              <span class="stage-number">01</span><span class="stage-name">Plan</span><span class="stage-agent">Architect</span><span class="stage-state">SPEC</span><span class="stage-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="stage-item" type="button" data-stage="build" aria-pressed="false">
+              <span class="stage-number">02</span><span class="stage-name">Build</span><span class="stage-agent">Coder</span><span class="stage-state">CODE</span><span class="stage-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="stage-item" type="button" data-stage="test" aria-pressed="false">
+              <span class="stage-number">03</span><span class="stage-name">Test</span><span class="stage-agent">Tester</span><span class="stage-state state-findings">FINDINGS</span><span class="stage-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="stage-item" type="button" data-stage="fix" aria-pressed="false">
+              <span class="stage-number">04</span><span class="stage-name">Fix</span><span class="stage-agent">Bug fixer</span><span class="stage-state">PATCH</span><span class="stage-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="stage-item" type="button" data-stage="security" aria-pressed="false">
+              <span class="stage-number">05</span><span class="stage-name">Security review</span><span class="stage-agent">Security reviewer</span><span class="stage-state state-pass">CLEAN</span><span class="stage-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="stage-item" type="button" data-stage="qa" aria-pressed="false">
+              <span class="stage-number">06</span><span class="stage-name">QA sign-off</span><span class="stage-agent">QA reviewer</span><span class="stage-state state-pass">APPROVE</span><span class="stage-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="stage-item" type="button" data-stage="verify" aria-pressed="false">
+              <span class="stage-number">07</span><span class="stage-name">Verify</span><span class="stage-agent">Deterministic verifier</span><span class="stage-state state-pass">PASS</span><span class="stage-arrow" aria-hidden="true">↗</span>
+            </button>
+            <button class="stage-item" type="button" data-stage="deliver" aria-pressed="false">
+              <span class="stage-number">08</span><span class="stage-name">Deliver</span><span class="stage-agent">Delivery gate</span><span class="stage-state state-pass">READY</span><span class="stage-arrow" aria-hidden="true">↗</span>
+            </button>
+          </div>
+
+          <article class="stage-detail" aria-live="polite" aria-atomic="true">
+            <div class="detail-top"><span id="detail-kicker">STAGE 01 / ARCHITECT</span><span class="detail-status" id="detail-status">SPEC WRITTEN</span></div>
+            <div class="detail-content" id="detail-content">
+              <p class="detail-label">THE HANDOFF</p>
+              <h3>Make the brief testable.</h3>
+              <p class="detail-copy">The Architect turns the three asks into a traceable plan and a sequenced todo list. Duplicate handling, cursor behavior, and audit events each get an explicit acceptance check.</p>
+              <div class="detail-output"><span>OUTPUT</span><strong>plan.md · todo.md</strong></div>
+            </div>
+            <div class="detail-footer"><span>SELECT A STAGE TO INSPECT</span><span id="detail-counter">01 / 08</span></div>
+          </article>
+        </div>
+        <p class="sample-disclaimer"><span aria-hidden="true">i</span> The run record is a fixed example to explain the system. Its commands, findings, and verdicts are illustrative—not a claim that this repository has just executed them.</p>
+      </section>
+
+      <section class="loop-section">
+        <div class="loop-visual" aria-hidden="true">
+          <div class="loop-label">THE ADVERSARIAL LOOP</div>
+          <div class="loop-box loop-test">TESTER<span>finds the failure</span></div>
+          <div class="loop-arrow loop-arrow-a">↓</div>
+          <div class="loop-box loop-fix">BUG FIXER<span>patches the cause</span></div>
+          <div class="loop-arrow loop-arrow-b">↗</div>
+          <div class="loop-return">RETEST UNTIL CLEAR</div>
+          <svg class="loop-path" viewBox="0 0 320 230" fill="none" aria-hidden="true"><path d="M245 169 C310 147 303 49 226 37" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 5"/><path d="M225 32 L216 36 L224 43" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="loop-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> WHEN THE AUTHOR IS WRONG</p>
+          <h2>Find it. Fix it.<br><em>Prove it again.</em></h2>
+          <p>The first test pass surfaces a replayed idempotency key that could create a duplicate expense, plus an unstable history cursor. Findings route back to the fixer—not around the tester.</p>
+          <div class="loop-fact"><span>01</span><p>Two concrete defects become a fix list, not a vague “try again.”</p></div>
+          <div class="loop-fact"><span>02</span><p>The Tester rechecks the patch before the pipeline can move forward.</p></div>
+        </div>
+      </section>
+
+      <section class="evidence-section" id="evidence">
+        <div class="evidence-heading">
+          <div><p class="eyebrow"><span class="eyebrow-line"></span> THE LAST WORD</p><h2>Opinion is a gate.<br><em>Evidence is the key.</em></h2></div>
+          <p class="evidence-intro">Security and QA are independent sign-offs. Then a deterministic verifier runs the target project's real checks. An agent saying “looks good” cannot substitute for a passing command.</p>
+        </div>
+        <div class="evidence-grid">
+          <article class="evidence-card review-card">
+            <div class="evidence-card-top"><span>01 / SECURITY</span><span class="gate-symbol">GATE</span></div>
+            <h3>Separate risk review.</h3>
+            <p>Checks the risk-bearing paths for secret exposure, input handling, and reliable duplicate protection.</p>
+            <div class="evidence-verdict"><span class="verdict-dot"></span><strong>CLEAN</strong><span>sample verdict</span></div>
+          </article>
+          <article class="evidence-card review-card">
+            <div class="evidence-card-top"><span>02 / SENIOR QA</span><span class="gate-symbol">GATE</span></div>
+            <h3>Shippability sign-off.</h3>
+            <p>Measures the finished change against the original requirements, not the implementer's summary.</p>
+            <div class="evidence-verdict"><span class="verdict-dot"></span><strong>APPROVE</strong><span>sample verdict</span></div>
+          </article>
+          <article class="evidence-card proof-card">
+            <div class="evidence-card-top"><span>03 / DETERMINISTIC</span><span class="proof-symbol">PROOF</span></div>
+            <h3>Commands must pass.</h3>
+            <p>Missing checks, failed checks, and timeouts all block a clean result.</p>
+            <div class="command-lines">
+              <div><code>pytest -q</code><span>18 passed</span></div>
+              <div><code>ruff check .</code><span>clean</span></div>
+              <div><code>compileall src</code><span>clean</span></div>
+            </div>
+            <span class="proof-note">ILLUSTRATIVE SAMPLE OUTPUT</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="delivery-band">
+        <div class="delivery-mark" aria-hidden="true"><span>08</span><i></i></div>
+        <div class="delivery-copy"><p class="eyebrow">SAFE DELIVERY</p><h2>Done means ready<br>to leave the room.</h2></div>
+        <div class="delivery-detail"><p>A secret scan runs before publishing. Repositories stay private by default. The handoff arrives with the artifacts and checks that explain why it is ready.</p><span>SECRET SCAN <b>→</b> PRIVATE-BY-DEFAULT PUSH <b>→</b> HANDOFF</span></div>
+      </section>
+
+      <section class="principles">
+        <p class="section-index">SYSTEM<br>PROPERTIES <span>03 / 03</span></p>
+        <div class="principle-items">
+          <div><span>01</span><h3>Role-separated</h3><p>Planning, implementation, testing, and sign-off have distinct owners.</p></div>
+          <div><span>02</span><h3>Provider-agnostic</h3><p>Route each role to the model and runtime suited to the job.</p></div>
+          <div><span>03</span><h3>Uncertainty-aware</h3><p>Structured gap reports route uncertainty to the smallest reliable intervention.</p></div>
+          <div><span>04</span><h3>Improves over time</h3><p>Persistent lessons carry corrections forward into future runs.</p></div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <a class="wordmark footer-wordmark" href="#top"><span class="wordmark-icon" aria-hidden="true"><span></span><span></span><span></span></span><span>FIELDNOTES<span class="wordmark-sub"> / SYSTEMS STUDY 01</span></span></a>
+        <p>A read-only window into a working pipeline.<br>Not a launch console. No live run is connected.</p>
+        <a class="back-top" href="#top">BACK TO TOP <span aria-hidden="true">↑</span></a>
+      </footer>
+    </main>
+    <script src="./app.js" defer></script>
+  </body>
+</html>
