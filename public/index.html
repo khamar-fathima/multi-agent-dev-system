@@ -24,6 +24,7 @@
         <a href="#method">Method</a>
         <a href="#run">Sample run</a>
         <a href="#evidence">Quality gates</a>
+        <a href="#local-use">Run locally</a>
       </nav>
       <a class="header-link" href="#run">Explore the run <span aria-hidden="true">↘</span></a>
     </header>
@@ -93,6 +94,43 @@
           </div>
           <div class="brief-card-index" aria-hidden="true">REQ<br>001</div>
         </div>
+
+        <section class="playback-panel" aria-labelledby="playback-title">
+          <div class="playback-head">
+            <div>
+              <p class="playback-kicker">FIXED WALKTHROUGH / FRONT-END ONLY</p>
+              <h3 id="playback-title">A run, in motion.</h3>
+            </div>
+            <span class="simulation-label"><span aria-hidden="true"></span> SIMULATED · NO REAL COMMANDS EXECUTE</span>
+          </div>
+          <div class="playback-controls">
+            <button class="play-button" id="play-toggle" type="button" aria-pressed="false">
+              <span class="play-icon" aria-hidden="true">▶</span><span id="play-label">Play walkthrough</span>
+            </button>
+            <button class="reset-button" id="play-reset" type="button">Restart</button>
+            <div class="progress-wrap">
+              <div class="progress-meta"><span id="run-state" role="status">READY · FIXED SAMPLE</span><span id="progress-count">0 / 16 EVENTS</span></div>
+              <div class="progress-track" id="progress-track" role="progressbar" aria-label="Simulated run progress" aria-valuemin="0" aria-valuemax="16" aria-valuenow="0"><span id="progress-fill"></span></div>
+            </div>
+          </div>
+          <div class="playback-grid">
+            <div class="activity-console" aria-label="Simulated pipeline activity">
+              <div class="console-top"><span><i></i><i></i><i></i></span><span>RUN LOG / ILLUSTRATIVE EVENTS</span><span>LOCAL DISPLAY ONLY</span></div>
+              <ol class="event-list" id="event-list" aria-live="polite" aria-relevant="additions text">
+                <li class="console-empty">Playback is paused. Start the fixed sample to see the handoffs unfold.</li>
+              </ol>
+            </div>
+            <aside class="artifact-shelf" aria-label="Intermediate sample outputs">
+              <div class="artifact-heading"><span>INTERMEDIATE OUTPUTS</span><span>FIXED SAMPLE</span></div>
+              <div class="artifact-item"><span class="artifact-type">SPEC</span><div><strong>plan.md</strong><small>Acceptance checks · 3 requirements</small></div><span class="artifact-mark">01</span></div>
+              <div class="artifact-item"><span class="artifact-type">CODE</span><div><strong>expense_api.py</strong><small>Write path · cursor history · audit trail</small></div><span class="artifact-mark">02</span></div>
+              <div class="artifact-item issue-artifact"><span class="artifact-type">TEST</span><div><strong>bug_report.md</strong><small>2 findings · duplicate replay + cursor tie</small></div><span class="artifact-mark">03</span></div>
+              <div class="artifact-item"><span class="artifact-type">PATCH</span><div><strong>fix_log.md</strong><small>Atomic key handling · stable ordering</small></div><span class="artifact-mark">04</span></div>
+              <div class="artifact-item"><span class="artifact-type">PROOF</span><div><strong>verification.txt</strong><small>Sample checks · passing evidence</small></div><span class="artifact-mark">07</span></div>
+              <p class="artifact-footnote">Illustrative artifact names and contents; this page creates no files.</p>
+            </aside>
+          </div>
+        </section>
 
         <div class="run-layout">
           <div class="stage-list" role="list" aria-label="Sample pipeline stages">
@@ -200,6 +238,20 @@
           <div><span>02</span><h3>Provider-agnostic</h3><p>Route each role to the model and runtime suited to the job.</p></div>
           <div><span>03</span><h3>Uncertainty-aware</h3><p>Structured gap reports route uncertainty to the smallest reliable intervention.</p></div>
           <div><span>04</span><h3>Improves over time</h3><p>Persistent lessons carry corrections forward into future runs.</p></div>
+        </div>
+      </section>
+
+      <section class="local-section" id="local-use">
+        <div class="local-index"><span>FIELD GUIDE</span><strong>LOCAL<br>FIRST</strong><span>CLI / SETUP</span></div>
+        <div class="local-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> HOW THE PROJECT IS USED</p>
+          <h2>This showcase is a window.<br><em>The system runs from a terminal.</em></h2>
+          <p class="local-intro">The project is CLI-first and intended to run locally in your own development environment. The page above is a static explanation—not a pipeline launcher or a live status view.</p>
+          <div class="local-columns">
+            <article><span class="local-number">01 / WINDOWS EXAMPLES</span><h3>Batch and PowerShell runners</h3><p>README examples such as <code>start.bat</code> and <code>start-codex.bat</code> are Windows batch entry points; <code>codex-team.ps1</code> is a PowerShell workflow. The headless Python orchestrator is another local or scripted route.</p></article>
+            <article><span class="local-number">02 / NATIVE WORKFLOWS</span><h3>Use the tools directly</h3><p>Native Claude Code uses the repository’s <code>/pipeline</code>, <code>/refactor</code>, and <code>/audit</code> commands. Codex-only usage is a separate runner workflow. These are not browser controls and are not the Windows batch examples.</p></article>
+          </div>
+          <p class="local-requirements"><strong>Local setup requires</strong> the relevant runtime and CLI tools for the workflow you choose, plus provider credentials configured in your environment. The README lists Anthropic and OpenAI credentials. <span>This showcase does not claim that local runtime setup was tested.</span></p>
         </div>
       </section>
 
